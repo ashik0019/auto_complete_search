@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/ddd', function () {
     return view('welcome');
 });
+Route::get('/','CountryController@index');
+Route::post('/autocomplete/fetch','CountryController@fetch')->name('autocomplete.fetch');
